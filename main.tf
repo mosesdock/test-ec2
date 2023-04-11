@@ -123,5 +123,6 @@ resource "aws_lb_target_group_attachment" "web_tga" {
 }
 
 resource "aws_security_group_rule" "web_lb_ingress" {
+  type        = "ingress"
   security_group_id = aws_security_group.web_sg.id
 }
